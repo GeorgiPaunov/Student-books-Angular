@@ -1,0 +1,19 @@
+<div class="login">
+    <form [formGroup]="form" (submit)="login()">
+        <h1>Login</h1>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" formControlName="username"/>
+        <div class="danger" *ngIf="f.username.touched && f.username.errors?.required">
+            This field is required!
+        </div>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password"/>
+        <div class="danger" *ngIf="f.password.touched && f.password.errors?.required">
+            This field is required!
+        </div>
+
+        <button type="submit" [disabled]="invalid">Login</button>
+    </form>
+</div>

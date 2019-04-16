@@ -1,0 +1,31 @@
+<div class="register">
+    <form [formGroup]="form" (submit)="register()">
+        <h1>Register</h1>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" formControlName="email" />
+        <div class="danger" *ngIf="f.email.touched && f.email.errors?.required">
+            This field is required!
+        </div>
+        <div class="danger" *ngIf="f.email.errors?.email">
+            The email format is invalid!
+        </div>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" formControlName="username" />
+        <div class="danger" *ngIf="f.username.touched && f.username.errors?.required">
+            This field is required!
+        </div>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password" />
+        <div class="danger" *ngIf="f.password.touched && f.password.errors?.required">
+            This field is required!
+        </div>
+        <div class="danger" *ngIf="f.password.errors?.minlength">
+            The password should be at least {{f.password.errors.minlength.requiredLength}} characters long!
+        </div>
+
+        <button type="submit" [disabled]="invalid">Register</button>
+    </form>
+</div>
