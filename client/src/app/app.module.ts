@@ -7,15 +7,20 @@ import { ToastrModule } from 'ngx-toastr';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/shared/navigation/navigation.component';
-import { HomeComponent } from './components/home/home/home.component';
+import { HomeComponent } from './components/home/home.component';
+import { BookAllComponent } from './components/book/book-all/book-all.component';
+import { BookItemComponent } from './components/book/book-item/book-item.component';
 
 import { ResponseInterceptorService } from './core/interceptors/response-interceptor.service';
+import { JwtInterceptorService } from './core/interceptors/jwt-interceptor.service';
 
 @NgModule({
     declarations: [
         AppComponent,
         NavigationComponent,
         HomeComponent,
+        BookAllComponent,
+        BookItemComponent,
     ],
     imports: [
         BrowserModule,
@@ -25,7 +30,8 @@ import { ResponseInterceptorService } from './core/interceptors/response-interce
         ToastrModule.forRoot()
     ],
     providers: [
-        { provide: HTTP_INTERCEPTORS, useClass: ResponseInterceptorService, multi: true }
+        { provide: HTTP_INTERCEPTORS, useClass: ResponseInterceptorService, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptorService, multi: true }
     ],
     bootstrap: [AppComponent]
 })

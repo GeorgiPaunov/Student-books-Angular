@@ -6,7 +6,7 @@ module.exports = {
         Book.find()
             .then((books) => {
                 res.status(200)
-                    .json({message: "Fetched data successfully!", books});
+                    .json(books);
             })
             .catch((error) => {
                 if (!error.statusCode) {

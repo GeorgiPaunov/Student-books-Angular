@@ -1,0 +1,47 @@
+img {
+    text-align: center;
+    width: 99%;
+    height: 370px;
+    border: 2px solid rgb(221, 221, 221);
+    border-radius: 10px;
+}
+
+button {
+    width: 47%;
+    border: 2px solid dodgerblue;
+    text-align: center;
+    font-size: 14px;
+    background: dodgerblue;
+    color: white;
+    border-radius: 7px;
+    margin: 7px 3px 3px 3px;
+    /* margin-bottom: 3px; */
+    box-shadow: 2px 2px 0 0 rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+  
+button:hover {
+    color: dodgerblue;
+    background: transparent;
+}
+  
+#delete {
+    border: 2px solid red;
+    background: red;
+}
+
+#delete:hover {
+    color: red;
+    background: transparent;
+}
+
+#edit {
+    border: 2px solid orange;
+    background: orange;
+}
+
+#edit:hover {
+    color: orange;
+    background: transparent;
+}

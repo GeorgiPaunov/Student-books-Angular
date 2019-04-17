@@ -7,16 +7,13 @@ import { AuthenticationService } from '../../../core/services/authentication.ser
     styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
-    username: string;
 
     constructor(public authService: AuthenticationService) { }
 
     ngOnInit() {
-        this.username = localStorage.getItem('username');
     }
 
     logout() {
         this.authService.logout();
-        this.username = '';
     }
 }

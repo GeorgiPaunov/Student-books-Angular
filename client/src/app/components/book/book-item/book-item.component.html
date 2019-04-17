@@ -1,0 +1,15 @@
+<h2>{{book.title}}</h2>
+<h2>{{book.grade}}. grade</h2>
+<img src={{book.imageUrl}} alt="" />
+<span *ngIf="isAuthenticated">
+    <div class="inner">
+        <button routerLink="/books/details/{{book._id}}">Details</button>
+        <button>Add</button>
+    </div>
+</span>
+<span *ngIf="isAdmin">
+    <div class="inner">
+        <button id="edit">Edit</button>
+        <button id="delete">Delete</button>
+    </div>
+</span>

@@ -3,7 +3,7 @@
     <div class="header-right">
         <span *ngIf="authService.isAuthenticated()">
             <a *ngIf="authService.isAdmin()" routerLink="/books/create">Create book</a>
-            <a routerLink="/lists/myLists">{{username}}'s lists</a>
+            <a routerLink="/lists/myLists">My lists</a>
             <a routerLink="/lists/create">Create list</a>
             <a routerLink="#" (click)="logout()">Logout</a>
         </span>
