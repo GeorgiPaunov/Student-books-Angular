@@ -1,0 +1,36 @@
+<div class="delete">
+    <h1 style="text-align: center">Delete Student Book</h1>
+    <form [formGroup]="form" (submit)="delete()">
+
+        <label for="title">Title</label>
+        <input type="text" id="title" formControlName="title" disabled/>
+
+        <label for="grade">Grade</label>
+        <input type="number" id="grade" formControlName="grade" disabled/>
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" formControlName="subject" disabled/>
+
+        <label for="author">Author</label>
+        <input type="text" id="author" formControlName="author" disabled/>
+
+        <label for="publisher">Publisher</label>
+        <input type="text" id="publisher" formControlName="publisher" disabled/>
+
+        <label for="year">Year</label>
+        <input type="number" id="year" formControlName="year" disabled/>
+
+        <label for="imageUrl">Image</label>
+        <input type="text" id="imageUrl" formControlName="imageUrl" disabled/>
+
+        <label for="price">Price</label>
+        <input type="number" step="0.1" id="price" formControlName="price" disabled/>
+
+        <label for="description">Description</label>
+        <textarea id="description" formControlName="description" disabled></textarea>
+
+        <button type="submit">Delete</button>
+    </form>
+</div>
+
+

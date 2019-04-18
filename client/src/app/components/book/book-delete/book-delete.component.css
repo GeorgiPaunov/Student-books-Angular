@@ -1,34 +1,42 @@
-.register{
+.delete{
     padding-top: 2em;
 }
  
-.register form {
+.delete form {
     display: grid;
     width: 25%;
     margin: 0 auto;
 }
 
-.register input {
+.delete input, textarea {
     padding: 10px;
     margin-bottom: 20px;
 }
 
-.register button {
+.delete input[type=number] {
+    width: 93%;
+}
+  
+.delete textarea {
+    height: 150px;
+}
+
+.delete button {
     width: 50%;
     height: 40px;
     margin:0 auto;
-    border: 2px solid dodgerblue;
+    border: 2px solid red;
     text-align: center;  
     font-size: 14px;
-    background: dodgerblue;
+    background: red;
     color: white;
     border-radius: 7px;
     margin-top: 20px; 
     box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.5); 
 }
 
-.register button:hover {
-    color: dodgerblue;
+.delete button:hover {
+    color: red;
     background: transparent;
 }
  

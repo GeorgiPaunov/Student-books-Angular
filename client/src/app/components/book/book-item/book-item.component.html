@@ -9,7 +9,7 @@
 </span>
 <span *ngIf="isAdmin">
     <div class="inner">
-        <button id="edit">Edit</button>
-        <button id="delete">Delete</button>
+        <button id="edit" routerLink="/books/edit/{{book._id}}">Edit</button>
+        <button id="delete" routerLink="/books/delete/{{book._id}}">Delete</button>
     </div>
 </span>

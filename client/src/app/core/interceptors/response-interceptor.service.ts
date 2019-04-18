@@ -15,7 +15,10 @@ export class ResponseInterceptorService implements HttpInterceptor {
         return next.handle(req)
             .pipe(tap(success => {
                 if (success instanceof HttpResponse) {
-                    if (success.url.endsWith('register') || success.url.endsWith('login')) {
+                    if (success.url.endsWith('register') || success.url.endsWith('login')
+                        || success.url.endsWith('create') || success.url.includes('edit') 
+                        || success.url.includes('delete')) {
+                            
                         this.toastr.success(success['body']['message'], 'Success!');
                     }
                 }

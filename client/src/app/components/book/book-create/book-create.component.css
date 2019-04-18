@@ -1,19 +1,27 @@
-.register{
+.create{
     padding-top: 2em;
 }
  
-.register form {
+.create form {
     display: grid;
     width: 25%;
     margin: 0 auto;
 }
 
-.register input {
+.create input, textarea {
     padding: 10px;
     margin-bottom: 20px;
 }
 
-.register button {
+.create input[type=number] {
+    width: 93%;
+}
+  
+.create textarea {
+    height: 150px;
+}
+
+.create button {
     width: 50%;
     height: 40px;
     margin:0 auto;
@@ -27,7 +35,7 @@
     box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.5); 
 }
 
-.register button:hover {
+.create button:hover {
     color: dodgerblue;
     background: transparent;
 }
