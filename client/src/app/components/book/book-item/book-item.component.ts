@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Book } from '../../../core/models/book';
 import { AuthenticationService } from '../../../core/services/authentication.service';
 
@@ -9,6 +9,7 @@ import { AuthenticationService } from '../../../core/services/authentication.ser
 })
 export class BookItemComponent {
     @Input() book: Book;
+    @Output() idToAddEmitter: EventEmitter<string> = new EventEmitter<string>();
 
     constructor(private authenticationService: AuthenticationService) { }
 
@@ -18,5 +19,9 @@ export class BookItemComponent {
 
     get isAdmin() {
         return this.authenticationService.isAdmin();
+    }
+
+    emitId() {
+        this.idToAddEmitter.emit(this.book._id);
     }
 }

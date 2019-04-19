@@ -1,46 +1,38 @@
-.delete {
+.create {
     padding-top: 2em;
 }
 
-.delete h1 {
+.create h1 {
     text-align: center;
 }
  
-.delete form {
+.create form {
     display: grid;
     width: 25%;
     margin: 0 auto;
 }
 
-.delete input, textarea {
+.create input {
     padding: 10px;
     margin-bottom: 20px;
 }
 
-.delete input[type=number] {
-    width: 93%;
-}
-  
-.delete textarea {
-    height: 150px;
-}
-
-.delete button {
+.create button {
     width: 50%;
     height: 40px;
     margin:0 auto;
-    border: 2px solid red;
+    border: 2px solid dodgerblue;
     text-align: center;  
     font-size: 14px;
-    background: red;
+    background: dodgerblue;
     color: white;
     border-radius: 7px;
     margin-top: 20px; 
     box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.5); 
 }
 
-.delete button:hover {
-    color: red;
+.create button:hover {
+    color: dodgerblue;
     background: transparent;
 }
  

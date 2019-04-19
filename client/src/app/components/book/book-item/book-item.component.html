@@ -4,7 +4,7 @@
 <span *ngIf="isAuthenticated">
     <div class="inner">
         <button routerLink="/books/details/{{book._id}}">Details</button>
-        <button>Add</button>
+        <button (click)="emitId()">Add</button>
     </div>
 </span>
 <span *ngIf="isAdmin">

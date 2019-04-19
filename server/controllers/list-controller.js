@@ -7,7 +7,7 @@ module.exports = {
         List.find({author: req.userId}).populate("studentBooks")
             .then((lists) => {
                 res.status(200)
-                    .json({ message: "Fetched data successfully!", lists });
+                    .json(lists);
             })
             .catch((error) => {
                 if (!error.statusCode) {

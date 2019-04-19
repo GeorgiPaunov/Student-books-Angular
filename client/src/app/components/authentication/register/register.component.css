@@ -1,5 +1,9 @@
-.register{
+.register {
     padding-top: 2em;
+}
+
+.register h1 {
+    text-align: center;
 }
  
 .register form {

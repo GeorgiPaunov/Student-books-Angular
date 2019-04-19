@@ -1,0 +1,4 @@
+<select #select class="list-select">
+    <option value="" disabled>Choose a list</option>
+    <option *ngFor="let list of list$ | async" value={{list._id}}>{{list.title}}</option>
+</select>

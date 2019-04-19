@@ -1,5 +1,9 @@
-.edit{
+.edit {
     padding-top: 2em;
+}
+
+.edit h1 {
+    text-align: center;
 }
  
 .edit form {

@@ -1,0 +1,36 @@
+<div class="item">
+    <div class="item-image">
+        <img src={{book.imageUrl}} />
+    </div>
+    <div class="item-table">
+        <table align="left">
+            <tbody>
+                <tr>
+                    <th>Title</th>
+                    <td>{{book.title}}</td>
+                </tr>
+                <tr>
+                    <th>Grade</th>
+                    <td>{{book.grade}}</td>
+                </tr>
+                <tr>
+                    <th>Author</th>
+                    <td>{{book.author}}</td>
+                </tr>
+                <tr>
+                    <th>Publisher</th>
+                    <td>{{book.publisher}}</td>
+                </tr>
+                <tr>
+                    <th>Year</th>
+                    <td>{{book.year}}</td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td>{{book.price.toFixed(2)}} lv.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button (click)="emitId()">Remove</button>
+</div>

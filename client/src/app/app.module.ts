@@ -10,6 +10,7 @@ import { NavigationComponent } from './components/shared/navigation/navigation.c
 import { HomeComponent } from './components/home/home.component';
 import { BookAllComponent } from './components/book/book-all/book-all.component';
 import { BookItemComponent } from './components/book/book-item/book-item.component';
+import { ListSelectComponent } from './components/list/list-select/list-select.component';
 
 import { ResponseInterceptorService } from './core/interceptors/response-interceptor.service';
 import { JwtInterceptorService } from './core/interceptors/jwt-interceptor.service';
@@ -21,6 +22,7 @@ import { JwtInterceptorService } from './core/interceptors/jwt-interceptor.servi
         HomeComponent,
         BookAllComponent,
         BookItemComponent,
+        ListSelectComponent,
     ],
     imports: [
         BrowserModule,

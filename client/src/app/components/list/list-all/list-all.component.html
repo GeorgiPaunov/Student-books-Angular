@@ -1,0 +1,31 @@
+<div class="table">
+    <h2>Your lists</h2>
+    <table align="center" class="list-table">
+        <tbody>
+            <tr>
+                <th width="40%">Name of list</th>
+                <th width="20%">Items</th>
+                <th width="20%">Total price</th>
+                <th width="20%">Delete</th>
+            </tr>
+            <tr *ngFor="let list of list$ | async">
+                <td>
+                    <a routerLink="/lists/details/{{list._id}}">{{list.title}}</a>
+                </td>
+                <td>
+                    {{list.studentBooks.length}} pcs
+                </td>
+                <td *ngIf="list.studentBooks.length; else zero">
+                    AAAArrrrggghhh
+                </td>
+                <td>
+                    <button (click)="delete(list._id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ng-template #zero>
+        <td>0 lv.</td>
+    </ng-template>
+</div>

@@ -1,5 +1,9 @@
-.create{
+.create {
     padding-top: 2em;
+}
+
+.create h1 {
+    text-align: center;
 }
  
 .create form {

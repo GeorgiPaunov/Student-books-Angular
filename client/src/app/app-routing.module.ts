@@ -16,6 +16,11 @@ const routes: Routes = [
         path: 'books',
         loadChildren: './components/book/book.module#BookModule',
         canLoad: [ AuthenticationGuard ]
+    },
+    {
+        path: 'lists',
+        loadChildren: './components/list/list.module#ListModule',
+        canLoad: [ AuthenticationGuard ]
     }
 ];
 

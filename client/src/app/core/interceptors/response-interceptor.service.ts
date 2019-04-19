@@ -17,7 +17,8 @@ export class ResponseInterceptorService implements HttpInterceptor {
                 if (success instanceof HttpResponse) {
                     if (success.url.endsWith('register') || success.url.endsWith('login')
                         || success.url.endsWith('create') || success.url.includes('edit') 
-                        || success.url.includes('delete')) {
+                        || success.url.includes('delete') || success.url.endsWith('add') 
+                        || success.url.endsWith('remove')) {
                             
                         this.toastr.success(success['body']['message'], 'Success!');
                     }
