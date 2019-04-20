@@ -1,8 +1,11 @@
 <div class="list">
     <h1>{{list.title}}</h1>
-    <div class="books" *ngIf="list.studentBooks.length">
+    <div class="books" *ngIf="list.studentBooks.length; else empty">
         <div *ngFor="let book of list.studentBooks | sortBooks">
             <app-list-item [book]="book" (idToRemoveEmitter)="removeBookFromList($event)"></app-list-item>
         </div>
     </div>
+    <ng-template #empty>
+        <h3>This list has no added student books yet.</h3>
+    </ng-template>
 </div>

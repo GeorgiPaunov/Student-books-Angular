@@ -11,7 +11,7 @@
         <div class="detail-row"><h2>Publisher</h2><h4>{{book.publisher}}</h4></div>
         <div class="detail-row"><h2>Price</h2><h4>{{book.price.toFixed(2)}} lv.</h4></div>
     </div>
-    <div class="book-description">
+    <div class="book-description" *ngIf="book.description">
         <div class="description-header"><h2>Description</h2></div>
         {{book.description}}
     </div>
