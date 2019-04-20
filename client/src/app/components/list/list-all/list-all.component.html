@@ -8,7 +8,7 @@
                 <th width="20%">Total price</th>
                 <th width="20%">Delete</th>
             </tr>
-            <tr *ngFor="let list of list$ | async">
+            <tr *ngFor="let list of list$ | async | sortLists">
                 <td>
                     <a routerLink="/lists/details/{{list._id}}">{{list.title}}</a>
                 </td>
@@ -16,7 +16,7 @@
                     {{list.studentBooks.length}} pcs
                 </td>
                 <td *ngIf="list.studentBooks.length; else zero">
-                    AAAArrrrggghhh
+                    {{list.studentBooks | totalPrice}} lv.
                 </td>
                 <td>
                     <button (click)="delete(list._id)">Delete</button>

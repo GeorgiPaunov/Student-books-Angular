@@ -1,7 +1,7 @@
 <div class="home">
     <h1>All Student Books</h1>
     <div class="books">
-        <div class="book" *ngFor="let book of book$ | async">
+        <div class="book" *ngFor="let book of book$ | async | sortBooks">
             <app-book-item [book]="book" (idToAddEmitter)="sendId($event)"></app-book-item>
         </div>
     </div>

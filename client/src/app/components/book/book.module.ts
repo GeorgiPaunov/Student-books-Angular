@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { SharedModule } from '../shared/shared.module';
 
 import { BookResolver } from '../../core/resolvers/book.resolver';
 import { AuthorizationGuard } from '../../core/guards/authorization.guard';
@@ -38,7 +39,8 @@ const routes: Routes = [
     imports: [
         CommonModule,
         ReactiveFormsModule,
-        RouterModule.forChild(routes)
+        RouterModule.forChild(routes),
+        SharedModule
     ],
     providers: [
         BookResolver,

@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ToastrModule } from 'ngx-toastr';
+import { SharedModule } from './components/shared/shared.module';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/shared/navigation/navigation.component';
@@ -22,14 +23,15 @@ import { JwtInterceptorService } from './core/interceptors/jwt-interceptor.servi
         HomeComponent,
         BookAllComponent,
         BookItemComponent,
-        ListSelectComponent,
+        ListSelectComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
         BrowserAnimationsModule,
-        ToastrModule.forRoot()
+        ToastrModule.forRoot(),
+        SharedModule
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: ResponseInterceptorService, multi: true },

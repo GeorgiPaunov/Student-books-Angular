@@ -1,7 +1,7 @@
 <div class="list">
     <h1>{{list.title}}</h1>
     <div class="books" *ngIf="list.studentBooks.length">
-        <div *ngFor="let book of list.studentBooks">
+        <div *ngFor="let book of list.studentBooks | sortBooks">
             <app-list-item [book]="book" (idToRemoveEmitter)="removeBookFromList($event)"></app-list-item>
         </div>
     </div>

@@ -31,3 +31,18 @@
 .list-table tr:nth-child(odd) {
     background-color: #fff;
 }
+
+.list-table button {
+    border: 2px solid red;
+    text-align: center;  
+    font-size: 14px;
+    background: red;
+    color: white;
+    border-radius: 7px;
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.5);
+}
+
+.list-table button:hover {
+    color: red;
+    background: transparent;
+}
