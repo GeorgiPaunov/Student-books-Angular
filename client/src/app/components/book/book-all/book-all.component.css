@@ -1,31 +1,22 @@
-.home {
-  text-align: center;
+.books {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.books {
-  display: flex;
-  margin: 0 auto;
-  width: 90%;
-  justify-content: left;
-  flex-wrap: wrap;
+.books:before,
+.books:after {
+    display: block;
+    content: '';
+    order:1000;
+}
+
+.books:before,
+.books:after,
+.book {
+    flex: 0 0 24%;
 }
 
 .book {
-  display: inline-block;
-  width: 30%;
-  margin: 10px;
-  border-radius: 4px;
-  background-color: #f1f1f1;
-}
-
-.inner {
-    display: inline-block;
-  }
-
-.list-select {
-  margin-top: 40px;
-  width: 20%;
-  height: 30px;
-  border-radius: 5px;
-  font-size: 16px;
+    margin-bottom: 1.5%;
 }

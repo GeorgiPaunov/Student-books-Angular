@@ -1,15 +1,19 @@
-<h2>{{book.title}}</h2>
-<h2>{{book.grade}}. grade</h2>
-<img src={{book.imageUrl}} alt="" />
-<span *ngIf="isAuthenticated">
-    <div class="inner">
-        <button routerLink="/books/details/{{book._id}}">Details</button>
-        <button (click)="emitId()">Add</button>
-    </div>
-</span>
-<span *ngIf="isAdmin">
-    <div class="inner">
-        <button id="edit" routerLink="/books/edit/{{book._id}}">Edit</button>
-        <button id="delete" routerLink="/books/delete/{{book._id}}">Delete</button>
-    </div>
-</span>
+<article class="book-card">
+    <header class="card-header">
+        <h3>{{book.title}}</h3>
+        <h3>{{book.grade}}. grade</h3>
+    </header>
+    <section class="card-picture">
+        <img src={{book.imageUrl}} alt="book" />
+    </section>
+    <footer class="card-footer">
+        <span class="buttons" *ngIf="isAuthenticated">
+            <button class="btn standart-btn" routerLink="/books/details/{{book._id}}">Details</button>
+            <button class="btn standart-btn" (click)="emitId()">Add</button>
+        </span>
+        <span class="buttons" *ngIf="isAdmin">
+            <button class="btn edit-btn" routerLink="/books/edit/{{book._id}}">Edit</button>
+            <button class="btn delete-btn" routerLink="/books/delete/{{book._id}}">Delete</button>
+        </span>
+    </footer>
+</article>

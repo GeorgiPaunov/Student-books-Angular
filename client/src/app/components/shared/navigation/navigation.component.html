@@ -1,15 +1,17 @@
-<header>
-    <a routerLink="/home">Home</a>
-    <div class="header-right">
-        <span *ngIf="authService.isAuthenticated()">
-            <a *ngIf="authService.isAdmin()" routerLink="/books/create">Create book</a>
-            <a routerLink="/lists/myLists">My lists</a>
-            <a routerLink="/lists/create">Create list</a>
-            <a routerLink="#" (click)="logout()">Logout</a>
-        </span>
-        <span *ngIf="!authService.isAuthenticated()">
-            <a routerLink="/users/register">Register</a>
-            <a routerLink="/users/login">Login</a>
-        </span>
-    </div>
+<header class="site-header">
+    <p class="site-title"><a routerLink="/home">Home</a></p>
+    <nav>
+        <ul>
+            <span *ngIf="authService.isAuthenticated()">
+                <li><a *ngIf="authService.isAdmin()" routerLink="/books/create">Create book</a></li>
+                <li><a routerLink="/lists/myLists">My lists</a></li>
+                <li><a routerLink="/lists/create">Create list</a></li>
+                <li><a routerLink="#" (click)="logout()">Logout</a></li>
+            </span>
+            <span *ngIf="!authService.isAuthenticated()">
+                <li><a routerLink="/users/register">Register</a></li>
+                <li><a routerLink="/users/login">Login</a></li>
+            </span>
+        </ul>
+    </nav>
 </header>

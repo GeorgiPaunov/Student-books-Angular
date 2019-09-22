@@ -1,4 +1,4 @@
-<div class="login">
+<div class="form">
     <h1>Login</h1>
     <form [formGroup]="form" (submit)="login()">
 
@@ -14,6 +14,6 @@
             This field is required!
         </div>
 
-        <button type="submit" [disabled]="invalid">Login</button>
+        <button class="btn standart-btn" type="submit" [disabled]="invalid">Login</button>
     </form>
 </div>

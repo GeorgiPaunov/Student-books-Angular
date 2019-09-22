@@ -1,0 +1,59 @@
+button.btn {
+    padding: 0.5em;
+    border-radius: 0.5em;
+    box-shadow: 2px 2px 0 0 rgba(0,0,0,0.5);
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button.btn:focus,
+button.btn:hover {
+    background: transparent;
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+button.standart-btn {
+    border: 2px solid dodgerblue;
+    background: dodgerblue;
+}
+
+button.standart-btn:focus,
+button.standart-btn:hover {
+    color: dodgerblue;
+}
+
+button.delete-btn {
+    border: 2px solid red;
+    background: red;
+}
+
+button.delete-btn:focus,
+button.delete-btn:hover {
+    color: red;
+}
+
+button.edit-btn {
+    border: 2px solid orange;
+    background: orange;
+}
+
+button.edit-btn:focus,
+button.edit-btn:hover {
+    color: orange;
+}
+
+button:disabled {
+    border: 2px solid grey;
+    background: grey;
+    cursor: not-allowed;
+}
+
+button:disabled:focus,
+button:disabled:hover {
+    color: grey;
+}

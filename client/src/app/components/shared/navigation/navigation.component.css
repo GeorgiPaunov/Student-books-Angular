@@ -1,47 +1,50 @@
-header {
+.site-header {
+    background: #F1F1F1;
+    color: #000;
     overflow: hidden;
-    background-color: #f1f1f1;
-    padding: 0 50px;
-
+    border-radius: 0.5em;
+    display: flex;
+    margin-bottom: 1.5em;
 }
 
-header a {
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 18px;
+.site-header .site-title {
+    font-size: 3em;
+    padding: 0 0.5em;
+}
+
+.site-header a {
+    display: block;
+    color: #000;
     text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    font-weight: bold;
-
-    /*border-radius: 4px;*/
 }
 
-header a.logo {
-    font-size: 25px;
-    font-weight: bold;
+.site-header nav, span {
+    display: flex;
+    margin-left: auto;
 }
 
-header a:hover {
+.site-header nav ul {
+    display: flex;
+}
+
+.site-header nav li {
+    list-style: none outside;
+    display: flex;
+    align-items: center;
+}
+
+.site-header nav a {
+    display: flex;
+    align-items: center;
+    height: 60%;
+    padding: 0 0.5em;
+    border-radius: 0.5em;
+    margin: 0 0.1em;
+}
+
+.site-header nav a:focus,
+.site-header nav a:hover {
     background-color: dodgerblue;
     color: white;
-}
-
-header .header-right {
-    float: right;
-}
-
-
-
-@media screen and (max-width: 500px) {
-    header a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-
-    header .header-right {
-        float: none;
-    }
+    outline: none;
 }

@@ -1,3 +1,10 @@
-.list h1, h3 {
-    text-align: center;
+.list-item {
+    max-width: 60%;
+    margin-left: 3em;
+    padding-top: 0.5em;
+    border-top: 0.3em solid #999;
+}
+
+.list-item:not(:last-child) {
+    margin-bottom: 3em;
 }

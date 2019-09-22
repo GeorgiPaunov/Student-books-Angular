@@ -1,4 +1,4 @@
-<div class="create">
+<div class="form">
     <h1>Create Student Book</h1>
     <form [formGroup]="form" (submit)="create()">
 
@@ -53,6 +53,6 @@
             The description should be at most {{f.description.errors.maxlength.requiredLength}} characters long!
         </div>
 
-        <button type="submit" [disabled]="invalid">Create</button>
+        <button class="btn standart-btn" type="submit" [disabled]="invalid">Create</button>
     </form>
 </div>

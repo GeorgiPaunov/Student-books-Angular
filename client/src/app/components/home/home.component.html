@@ -1,2 +1,4 @@
-<app-list-select #listSelect *ngIf="authService.isAuthenticated()"></app-list-select>
-<app-book-all (bookIdEmitter)="addBookToList($event)"></app-book-all>
+<div class="home">
+    <app-list-select #listSelect *ngIf="authService.isAuthenticated()"></app-list-select>
+    <app-book-all (bookIdEmitter)="addBookToList($event)"></app-book-all>
+</div>

@@ -1,49 +1,32 @@
-.table {
-    text-align: center;
+.list-table {
+    margin: 0 auto;
 }
 
 .list-table,
 .list-table th,
 .list-table td {
-    border: 1px solid black;
+    border: 1px solid #000;
     border-collapse: collapse;
-    text-align: left;
-}
-
-.list-table {
-    width: 50%;
-    table-layout: fixed;
 }
 
 .list-table th, td {
-    padding: 5px;
+    padding: 0.3em;
 }
 
 .list-table th {
-    color: white;
-    background-color: black;
+    color: #FFF;
+    background-color: #000;
+    font-size: 1.2em;
+}
+
+.list-table td:not(:last-child) {
+    text-align: left;
 }
 
 .list-table tr:nth-child(even) {
-    background-color: #ddd;
+    background-color: #DDD;
 }
 
 .list-table tr:nth-child(odd) {
-    background-color: #fff;
-}
-
-.list-table button {
-    border: 2px solid red;
-    text-align: center;  
-    font-size: 14px;
-    background: red;
-    color: white;
-    border-radius: 7px;
-    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.5);
-    cursor: pointer;
-}
-
-.list-table button:hover {
-    color: red;
-    background: transparent;
+    background-color: #FFF;
 }

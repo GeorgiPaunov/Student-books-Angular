@@ -1,4 +1,4 @@
-<div class="delete">
+<div class="form">
     <h1>Delete Student Book</h1>
     <form [formGroup]="form" (submit)="delete()">
 
@@ -29,7 +29,7 @@
         <label for="description">Description</label>
         <textarea id="description" formControlName="description" disabled></textarea>
 
-        <button type="submit">Delete</button>
+        <button class="btn delete-btn" type="submit">Delete</button>
     </form>
 </div>
 

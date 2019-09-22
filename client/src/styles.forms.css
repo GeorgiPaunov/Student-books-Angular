@@ -1,0 +1,32 @@
+.form form {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.form label {
+    float: left;
+    padding-left: 0.1em;
+}
+  
+.form input, textarea {
+    margin: 0 auto 1em auto;
+    padding: 0.5em;
+    width: 100%;
+    border-radius: 0.3em;
+}
+  
+.form textarea {
+    height: 12em;
+}
+
+.form button {
+    min-width: 30%;
+}
+
+.form .danger {
+    padding: 0.3em;
+    border-radius: 0.3em;
+    background: #F00;
+    color: #FFF;
+    margin-bottom: 0.5em;
+}

@@ -1,6 +1,6 @@
 <div class="table">
-    <h2>Your lists</h2>
-    <table align="center" class="list-table">
+    <h1>Your lists</h1>
+    <table class="list-table">
         <tbody>
             <tr>
                 <th width="40%">Name of list</th>
@@ -19,7 +19,7 @@
                     {{list.studentBooks | totalPrice}} lv.
                 </td>
                 <td>
-                    <button (click)="delete(list._id)">Delete</button>
+                    <button class="btn delete-btn" (click)="delete(list._id)">Delete</button>
                 </td>
             </tr>
         </tbody>

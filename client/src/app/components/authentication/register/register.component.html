@@ -1,4 +1,4 @@
-<div class="register">
+<div class="form">
     <h1>Register</h1>
     <form [formGroup]="form" (submit)="register()">
 
@@ -26,6 +26,6 @@
             The password should be at least {{f.password.errors.minlength.requiredLength}} characters long!
         </div>
 
-        <button type="submit" [disabled]="invalid">Register</button>
+        <button class="btn standart-btn" type="submit" [disabled]="invalid">Register</button>
     </form>
 </div>
